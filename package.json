@@ -1,7 +1,7 @@
 {
   "name": "generator-angular1",
-  "version": "1.0.0",
-  "description": "用于生成angular1项目的模板，包括按需加载、HistoryApi、编译打包等功能",
+  "version": "1.0.2",
+  "description": "用于生成angular 1.* 项目的模板，包括按需加载、HistoryApi、编译打包等功能",
   "author": "jady@live.com",
   "repository": {
 	"type": "git",

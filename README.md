@@ -1,6 +1,6 @@
 # generator-angular1
 
-用于生成angular1项目的模板，包括按需加载、HistoryApi、编译打包等功能
+用于生成angular 1.\* 项目的模板，包括按需加载、HistoryApi、编译打包等功能
 
 ## 准备工作
 
