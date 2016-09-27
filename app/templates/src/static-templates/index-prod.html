@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>Angular1示范项目</title>
+  <% for (var css in htmlWebpackPlugin.files.css) { %><link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" /><% } %>
+</head>
+<body>
+  <div>
+    <div>
+      <a href="/">Index</a>&nbsp;|
+      <a href="/user/">User</a>&nbsp;|
+      <a href="/message/">Message</a>
+    </div>
+    <ui-view></ui-view>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.manifest.entry %>" type="text/javascript"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>" type="text/javascript"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>" type="text/javascript"></script>
+</body>
+</html>
