@@ -3,7 +3,7 @@
  */
 
 // 项目配置文件信息
-const DOMAIN = 'http://<%=domain%>';
+const DOMAIN = 'http://<%=domain%>:<%=port%>';
 const DEVSERVERDOMAIN = '<%=interfaceServer%>';
 
 var webpack = require('webpack');
@@ -23,7 +23,7 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve("./r/"),
+        path: path.resolve("./src/static/r/"),
         filename: "[name].js",
         chunkFilename: "[name].js",
         publicPath: DOMAIN + "/r/"
@@ -104,6 +104,9 @@ module.exports = {
 
         proxy: {
             "*.do": {
+                target: DEVSERVERDOMAIN
+            },
+            "/proxy/path/": {
                 target: DEVSERVERDOMAIN
             }
         }
