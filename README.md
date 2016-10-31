@@ -32,6 +32,7 @@
 * mock配置：在 mock/mock.config.js文件中，详细使用说明参见 [express-mock-api](https://www.npmjs.com/package/express-mock-api)
 * proxy配置：在 config/webpack.dev.js文件的devServer.proxy属性中。path的写法参见 [path-to-reg](https://www.npmjs.com/package/path-to-regexp)，值得写法一般都相同。示例如下：
 
+`
    proxy: {
        "*.do": {
             target: "http://192.168.1.3"  // 这就是代理目标服务的地址
@@ -40,5 +41,15 @@
             target: "http://192.168.1.4"  // 这就是代理目标服务的地址
         }
     }
+`
+
+>   proxy: {
+>      "*.do": {
+>           target: "http://192.168.1.3"  // 这就是代理目标服务的地址
+>       },
+>       "/path/": {
+>           target: "http://192.168.1.4"  // 这就是代理目标服务的地址
+>       }
+>   }
 
 
